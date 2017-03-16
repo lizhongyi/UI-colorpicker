@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <style>
+            body {
+                margin: 0px;
+                padding: 0px;
+                background: #FFF;
+            }
+            
+            p,
+            h1,
+            h2,
+            ul {
+                margin: 0px;
+                padding: 0px
+            }
+            
+            ul {
+                list-style: none
+            }
+            
+            #wrap {
+                width: 100%;
+                max-width: 360px;
+                margin: 0 auto;
+                background: rgb(250, 250, 250)
+            }
+            
+            #header {
+                height: 60px;
+            }
+            
+            #top {
+                margin-left: 8px;
+                font-size: 12px;
+                color: #FFF;
+            }
+            
+            #top #left span {
+                display: inline-block;
+                width: 8px;
+                height: 8px;
+                border: 1px solid #FFF;
+                margin-right: 2px;
+                border-radius: 5px;
+            }
+            
+            #top #left {
+                float: left;
+            }
+            
+            #top #right {
+                float: right;
+                margin-right: 10px;
+                padding-top: 2px;
+            }
+            
+            #top #left span.shi {
+                background: #FFF;
+            }
+            
+            #top #right .dianchi {
+                border: 1px solid #FFF;
+                padding: 1px;
+                float: left;
+                height: 12px;
+                padding-right: 2px;
+            }
+            
+            #top #right .dianchi span {
+                display: block;
+                height: 8px;
+                background: #FFF;
+                float: left;
+                margin-left: 1px;
+                width: 4px;
+            }
+            
+            #top #right .date {
+                float: left;
+                margin-top: -2px;
+                margin-right: 6px;
+            }
+            
+            #body {
+                min-height: 560px;
+            }
+            
+            #logo {
+                clear: both;
+                text-align: center;
+                padding-top: 8px;
+            }
+            
+            #footer {
+                position: absolute;
+                bottom: 0px;
+                width: 100%;
+                padding: 10px 0px;
+                max-width: 360px;
+                height: 50px;
+                background: #f3f3f3;
+            }
+            
+            #menu {
+                background: #F5F5F5;
+                line-height: 38px;
+                text-align: center;
+            }
+            
+            #menu a {
+                font-size: 20px;
+                text-decoration: none;
+                display: inline-block;
+                margin-right: 40px;
+            }
+            
+            .blue {}
+            
+            .blue1 {}
+            
+            .white {
+                color: #666;
+            }
+            
+            #zhibo-top {
+                line-height: 30px;
+                color: #666;
+                height: 30px;
+                background: rgb(232, 232, 232)
+            }
+            
+            .zicon {
+                border-radius: 5px;
+                padding-left: 10px;
+                line-height: 25px;
+                float: left;
+            }
+            
+            .zhibo-info {
+                font-size: 12px;
+                padding-left: 10px;
+                float: left;
+            }
+            
+            .dates {
+                float: right!important;
+                width: 80px;
+                font-size: 12px;
+            }
+            
+            #zhibo-list {
+                clear: both
+            }
+            
+            #zhibo-list .item {
+                margin: 0px 20px;
+                line-height: 20px;
+                color: #222;
+                padding: 15px 0;
+                border-bottom: 1px solid #eee;
+                padding-bottom: 5px;
+                font-size: 14px;
+            }
+            
+            .red {
+                color: red;
+            }
+            
+            .footer-menu li {}
+            
+            .item {
+                flex-grow: 1;
+                /* default 0 */
+            }
+            
+            .footer-menu {
+                display: flex;
+                flex-direction: row
+            }
+            
+            .footer-menu li span {
+                display: block;
+                font-size: 14px;
+                width: 100%;
+                margin-bottom: 2px;
+                text-align: center;
+                color: #666;
+            }
+            
+            #icon-logo {
+                position: absolute;
+                left: 100px;
+                width: 100px;
+                top: 100px;
+                height: 100px;
+                padding: 10px;
+                border-radius: 15px;
+            }
+        </style>
+        <link rel="stylesheet" href="seban/farbtastic.css">
+        <link href="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div id="wrap">
+            <div id="icon-logo" :style='"background:" +bgcolor'><img width="100%" src="1.png" alt=""></div>
+            <div id="header" class="blue1" :style='"background:" +bgcolor'>
+                <div id="top">
+                    <div id="left"><span class="shi"></span><span class="shi"></span><span class="shi"></span><span></span><span></span> China mobile</div>
+                    <div id="right">
+                        <div class="date">12:25</div>
+                        <div class="dianchi">
+                            <span></span> <span></span> <span></span> <span></span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div id="logo"><img width="18%;" src="logo.png" alt=""></div>
+            </div>
+            <div id="body">
+                <div id="menu">
+                    <a href="" class="blue" :style='"color:" +bgcolor'>直播</a> <a style="margin-right:20px " class="white" href="">要闻</a>
+                </div>
+                <div id="zhibo-top">
+                    <div class="zicon blue" :style='"color:" +bgcolor'>
+                        ■
+                    </div>
+                    <div class="zhibo-info">
+                        格隆汇7X24港股财经快讯
+                    </div>
+                    <div class="dates">2017-2-25</div>
+                    <div id="zhibo-list">
+                        <div class="item">
+                            <p>
+                                <span class="dtb-date red">19:25</span> 【港交所全面准备债券通 适时由相关各方公布更多细节】格隆汇15日讯，港交所认为，债券通将为内地资本市场发展迎位。
+                            </P>
+                        </div>
+
+
+
+                        <div class="item">
+                            <p>
+                                <span class="dtb-date red">19:00</span> 【安监总局：进一步完善煤矿安全"体检"方案】格隆汇15日讯，3月14日，国家安全监管总局、国家煤矿安监局召开煤矿。
+                            </P>
+                        </div>
+
+
+
+                        <div class="item">
+                            <p>
+                                <span class="dtb-date red">18:50</span>【农业部：农村改革每项任务要有明确时间表】格隆汇15日讯，3月13日，农业部部长韩长赋主持召开部深化农村改革工作领导小组会议。
+                            </P>
+                        </div>
+                        <div class="item">
+                            <p>
+                                <span class="dtb-date red">18:25</span> 【港交所全面准备债券通 适时由相关各方公布更多细节】格隆汇15日讯，港交所认为，债券通将为内地资本市场发展迎位。
+                            </P>
+                        </div>
+                        <div class="item">
+                            <p>
+                                <span class="dtb-date red">19:00</span> 【安监总局：进一步完善煤矿安全"体检"方案】格隆汇15日讯，3月14日，国家安全监管总局、国家煤矿安监局召开煤矿。
+                            </P>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="footer">
+                <ul class="footer-menu">
+                    <li class="item">
+                        <span :style='"color:" +bgcolor' class="glyphicon   glyphicon-flash"></span>
+                        <span :style='"color:" +bgcolor' class="glyphicon-class">电报</span>
+                    </li>
+                    <li class="item">
+                        <span class="glyphicon glyphicon-list"></span>
+                        <span class="glyphicon-class">内参</span>
+                    </li>
+                    <li class="item">
+                        <span class="glyphicon glyphicon-stats"></span>
+                        <span class="glyphicon-class">个人</span>
+                    </li>
+                    <li class="item">
+                        <span class="glyphicon glyphicon-user"></span>
+                        <span class="glyphicon-class">个人</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div style="position: absolute;top:10px;right:10px;">
+                <input type="text" id="color" v-model="bgcolor" name="color" value="#0066cc" />
+                <div id="colorpicker"></div>
+            </div>
+        </div>
+    </body>
+    <script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/vue/2.2.2/vue.js"></script>
+    <script src="seban/farbtastic.js"></script>
+
+    <script>
+        var vm = new Vue({
+            el: "#wrap",
+            data: {
+                color: '#0066cc',
+                bgcolor: '#0066cc'
+            },
+            ready: function() {
+
+            },
+            created: function() {
+
+
+            },
+        })
+    </script>
+
+    <script type="text/javascript">
+        var ss = $.farbtastic("#colorpicker", function(data) {
+            vm.bgcolor = data;
+        }).setColor("#0066cc");
+    </script>
+
+</html>
